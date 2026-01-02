@@ -28,8 +28,13 @@ def checkPasswordStrength(password):
         return "Medium Password"
     else:
         return "Strong Password"
-    
-password = input("Enter your password: ")
-result = checkPasswordStrength(password)
 
-print("Password Strength: ", result)
+while True:  
+    password = input("\nEnter your password (or type 'exit' to quit): ")
+    
+    if password.lower() == "exit":
+        print("Program exited")
+        break
+
+    result = checkPasswordStrength(password)
+    print("Password Strength: ", result)
